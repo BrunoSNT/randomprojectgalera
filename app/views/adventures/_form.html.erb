@@ -1,0 +1,35 @@
+<%= form_with(model: adventure, local: true) do |form| %>
+  <% if adventure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(adventure.errors.count, "error") %> prohibited this adventure from being saved:</h2>
+
+      <ul>
+      <% adventure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :theme_id %><br />
+    <%= form.collection_select(:theme_id, Theme.all, :id, :name) %> 
+  </div>
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<!--<embed src="path/to/background.mp3" autostart="true" loop="true" hidden="true"><embed>
+->

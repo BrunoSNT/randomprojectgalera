@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Character:</strong>
+  <%= @inventory.character %>
+</p>
+
+<p>
+  <strong>Gold:</strong>
+  <%= @inventory.gold %>
+</p>
+
+<p>
+  <strong>Silver:</strong>
+  <%= @inventory.silver %>
+</p>
+
+<p>
+  <strong>Copper:</strong>
+  <%= @inventory.copper %>
+</p>
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>

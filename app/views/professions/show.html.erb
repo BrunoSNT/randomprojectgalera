@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @profession.name %>
+</p>
+
+<p>
+  <strong>Str bonus:</strong>
+  <%= @profession.str_bonus %>
+</p>
+
+<p>
+  <strong>Dex bonus:</strong>
+  <%= @profession.dex_bonus %>
+</p>
+
+<p>
+  <strong>Con bonus:</strong>
+  <%= @profession.con_bonus %>
+</p>
+
+<p>
+  <strong>Int bonus:</strong>
+  <%= @profession.int_bonus %>
+</p>
+
+<p>
+  <strong>Wis bonus:</strong>
+  <%= @profession.wis_bonus %>
+</p>
+
+<p>
+  <strong>Cha bonus:</strong>
+  <%= @profession.cha_bonus %>
+</p>
+
+<%= link_to 'Edit', edit_profession_path(@profession) %> |
+<%= link_to 'Back', professions_path %>

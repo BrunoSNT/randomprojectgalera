@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inventory: one
+  name: MyString
+  damage: MyString
+  bonus: MyString
+  description: MyString
+
+two:
+  inventory: two
+  name: MyString
+  damage: MyString
+  bonus: MyString
+  description: MyString

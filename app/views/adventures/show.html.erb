@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @adventure.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @adventure.description %>
+</p>
+
+<p>
+  <strong>Theme:</strong>
+  <%= @adventure.theme %>
+</p>
+
+<%= link_to 'Edit', edit_adventure_path(@adventure) %> |
+<%= link_to 'Back', adventures_path %>

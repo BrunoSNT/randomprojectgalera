@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Professions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Str bonus</th>
+      <th>Dex bonus</th>
+      <th>Con bonus</th>
+      <th>Int bonus</th>
+      <th>Wis bonus</th>
+      <th>Cha bonus</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professions.each do |profession| %>
+      <tr>
+        <td><%= profession.name %></td>
+        <td><%= profession.str_bonus %></td>
+        <td><%= profession.dex_bonus %></td>
+        <td><%= profession.con_bonus %></td>
+        <td><%= profession.int_bonus %></td>
+        <td><%= profession.wis_bonus %></td>
+        <td><%= profession.cha_bonus %></td>
+        <td><%= link_to 'Show', profession %></td>
+        <td><%= link_to 'Edit', edit_profession_path(profession) %></td>
+        <td><%= link_to 'Destroy', profession, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profession', new_profession_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  str_bonus: 1
+  dex_bonus: 1
+  con_bonus: 1
+  int_bonus: 1
+  wis_bonus: 1
+  cha_bonus: 1
+
+two:
+  name: MyString
+  str_bonus: 1
+  dex_bonus: 1
+  con_bonus: 1
+  int_bonus: 1
+  wis_bonus: 1
+  cha_bonus: 1
