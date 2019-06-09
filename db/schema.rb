@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_04_215117) do
+ActiveRecord::Schema.define(version: 2019_06_09_193647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2019_06_04_215117) do
     t.integer "hit_points"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type"
     t.index ["adventure_id"], name: "index_characters_on_adventure_id"
     t.index ["alignment_id"], name: "index_characters_on_alignment_id"
     t.index ["faction_id"], name: "index_characters_on_faction_id"
@@ -87,6 +88,11 @@ ActiveRecord::Schema.define(version: 2019_06_04_215117) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["inventory_id"], name: "index_items_on_inventory_id"
+  end
+
+  create_table "npcs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "professions", force: :cascade do |t|
