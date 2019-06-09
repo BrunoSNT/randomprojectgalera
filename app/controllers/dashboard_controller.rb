@@ -4,6 +4,7 @@ class DashboardController < CharactersController
   end
 
   def character
+    @character = Character.all
   end
 
   def map

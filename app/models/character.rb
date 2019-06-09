@@ -4,5 +4,5 @@ class Character < ApplicationRecord
   belongs_to :alignment
   belongs_to :adventure
   belongs_to :user
-  has_one :inventory
+  has_one :inventory, dependent: :destroy
 end
