@@ -52,6 +52,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :abilities_id %><br />
+    <%= form.collection_select(:abilities_id, Ability.all, :id, :name) %> 
+  </div>
+
+  <div class="field">
     <%= form.label :experience %>
     <%= form.number_field :experience %>
   </div>

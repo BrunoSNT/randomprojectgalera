@@ -8,4 +8,5 @@
 @user = User.create email:"admin@admin.com", password: "123456"
 @theme = Theme.create name: "Pos Apocaliptico"
 @adventure = Adventure.create name:"Fallen Earth", theme: @theme
-
+@alignment = Alignment.create name:"Lawfull"
+@profession = Profession.create name: "Civis"

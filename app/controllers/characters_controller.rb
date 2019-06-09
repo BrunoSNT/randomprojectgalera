@@ -10,6 +10,7 @@ class CharactersController < ApplicationController
   # GET /characters/1
   # GET /characters/1.json
   def show
+    @abilities = @character.abilities
     @inventory = @character.inventory
     @items = Item.all
   end

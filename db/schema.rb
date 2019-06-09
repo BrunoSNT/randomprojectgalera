@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_09_193647) do
+ActiveRecord::Schema.define(version: 2019_06_09_221738) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "abilities", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "str_bonus"
+    t.integer "dex_bonus"
+    t.integer "con_bonus"
+    t.integer "int_bonus"
+    t.integer "wis_bonus"
+    t.integer "cha_bonus"
+    t.integer "abilable_id"
+    t.string "abilable_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["abilable_type", "abilable_id"], name: "index_abilities_on_abilable_type_and_abilable_id"
+  end
 
   create_table "adventures", force: :cascade do |t|
     t.string "name"
@@ -60,6 +76,16 @@ ActiveRecord::Schema.define(version: 2019_06_09_193647) do
     t.index ["user_id"], name: "index_characters_on_user_id"
   end
 
+  create_table "dices", force: :cascade do |t|
+    t.string "name"
+    t.integer "sides"
+    t.integer "diceable_id"
+    t.string "diceable_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["diceable_type", "diceable_id"], name: "index_dices_on_diceable_type_and_diceable_id"
+  end
+
   create_table "factions", force: :cascade do |t|
     t.string "name"
     t.bigint "alignment_id"
@@ -82,8 +108,12 @@ ActiveRecord::Schema.define(version: 2019_06_09_193647) do
   create_table "items", force: :cascade do |t|
     t.bigint "inventory_id"
     t.string "name"
-    t.integer "damage"
-    t.integer "bonus"
+    t.integer "str_bonus"
+    t.integer "dex_bonus"
+    t.integer "con_bonus"
+    t.integer "int_bonus"
+    t.integer "wis_bonus"
+    t.integer "cha_bonus"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

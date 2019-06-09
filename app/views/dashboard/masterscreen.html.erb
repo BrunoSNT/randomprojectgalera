@@ -1,11 +1,13 @@
 <h1>Dashboard#MasterScreen</h1>
 <p>Find me in app/views/dashboard/masterscreen.html.erb</p>
+<%= link_to 'Dados',  dices_path %> |
 <%= link_to 'Temas',  themes_path %> |
 <%= link_to 'Aventuras',  adventures_path %> |
 <%= link_to 'Alinhamentos',  alignments_path %> |
 <%= link_to 'Facções',  factions_path %> |
 <%= link_to 'Profissões',  professions_path %> |
+<%= link_to 'Abilidades',  abilities_path %> |
 <%= link_to 'Personagens',  characters_path %> |
 <%= link_to 'Inventory',  inventories_path %> |
-<%= link_to 'Itens',  items_path %> 
+<%= link_to 'Itens',  items_path %> |
 <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        

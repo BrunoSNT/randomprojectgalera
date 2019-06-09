@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ability.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ability.description %>
+</p>
+
+<p>
+  <strong>Str bonus:</strong>
+  <%= @ability.str_bonus %>
+</p>
+
+<p>
+  <strong>Dex bonus:</strong>
+  <%= @ability.dex_bonus %>
+</p>
+
+<p>
+  <strong>Con bonus:</strong>
+  <%= @ability.con_bonus %>
+</p>
+
+<p>
+  <strong>Int bonus:</strong>
+  <%= @ability.int_bonus %>
+</p>
+
+<p>
+  <strong>Wis bonus:</strong>
+  <%= @ability.wis_bonus %>
+</p>
+
+<p>
+  <strong>Cha bonus:</strong>
+  <%= @ability.cha_bonus %>
+</p>
+
+<%= link_to 'Edit', edit_ability_path(@ability) %> |
+<%= link_to 'Back', abilities_path %>

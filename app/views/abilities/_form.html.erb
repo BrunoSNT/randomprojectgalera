@@ -1,10 +1,10 @@
-<%= form_with(model: item, local: true) do |form| %>
-  <% if item.errors.any? %>
+<%= form_with(model: ability, local: true) do |form| %>
+  <% if ability.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+      <h2><%= pluralize(ability.errors.count, "error") %> prohibited this ability from being saved:</h2>
 
       <ul>
-      <% item.errors.full_messages.each do |message| %>
+      <% ability.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -12,18 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :inventory_id %><br />
-    <%= form.collection_select(:inventory_id, Inventory.all, :id, :gold) %> 
-  </div>
-
-  <div class="field">
-    <%= form.label :dice_id %><br />
-    <%= form.collection_select(:dice_id, Dice.all, :id, :name) %> 
-  </div>
-
-  <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
   </div>
 
   <div class="field">
@@ -57,8 +52,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.label :character_id %><br />
+    <%= form.collection_select(:character_id, Character.all, :id, :name) %> 
   </div>
 
   <div class="actions">
