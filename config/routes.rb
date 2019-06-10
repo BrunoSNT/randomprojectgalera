@@ -17,7 +17,7 @@ Rails.application.routes.draw do
       resources :factions
       resources :professions
       resources :items
-      namespace :characters
+      resources :characters
       namespace :characters do
         resources :inventories
         resources :items
@@ -26,7 +26,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'themes'
   get 'dashboard/index'
   get 'dashboard/masterscreen'
   get 'welcome/index'
