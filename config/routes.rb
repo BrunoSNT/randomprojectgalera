@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
+  get 'themes'
+  get 'themes/new'
+  get 'dashboard/masterscreen'
+  get 'welcome/index'
   resources :abilities
   resources :dices
   resources :themes
@@ -11,12 +15,14 @@ Rails.application.routes.draw do
   resources :alignments
   resources :professions
 
-  resources :themes do
-    resources :adventures do
+  namespace :themes do
+    resource  :adventures
+    namespace :adventures do
       resources :factions
       resources :professions
       resources :items
-      resources :characters do
+      resource :characters
+      namespace :characters do
         resources :inventories
         resources :items
         resources :abilities
