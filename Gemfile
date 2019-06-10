@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.2'
 
+gem 'font-awesome-sass', '~> 5.8.1'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'bootstrap', '~> 4.3.1'
+gem 'simple_form'
 gem 'rails-erd', group: :development
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

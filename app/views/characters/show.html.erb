@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Email:</strong>
+  <%= @character.user.email %>
+</p>
+
+<p>
   <strong>Name:</strong>
   <%= @character.name %>
 </p>
@@ -17,17 +22,17 @@
 
 <p>
   <strong>Faction:</strong>
-  <%= @character.faction %>
+  <%= @character.faction.name %>
 </p>
 
 <p>
   <strong>Profession:</strong>
-  <%= @character.profession %>
+  <%= @character.profession.name %>
 </p>
 
 <p>
   <strong>Alignment:</strong>
-  <%= @character.alignment %>
+  <%= @character.alignment.name %>
 </p>
 
 <p>

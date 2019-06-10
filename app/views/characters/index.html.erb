@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>User</th>
       <th>Name</th>
       <th>Char name</th>
       <th>Background</th>
@@ -28,12 +29,13 @@
   <tbody>
     <% @characters.each do |character| %>
       <tr>
+        <td><%= character.user.email %></td>
         <td><%= character.name %></td>
         <td><%= character.char_name %></td>
         <td><%= character.background %></td>
-        <td><%= character.faction %></td>
-        <td><%= character.profession %></td>
-        <td><%= character.alignment %></td>
+        <td><%= character.faction.name %></td>
+        <td><%= character.profession.name %></td>
+        <td><%= character.alignment.name %></td>
         <td><%= character.experience %></td>
         <td><%= character.strength %></td>
         <td><%= character.dexterity %></td>

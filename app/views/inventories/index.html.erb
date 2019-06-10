@@ -16,7 +16,7 @@
   <tbody>
     <% @inventories.each do |inventory| %>
       <tr>
-        <td><%= inventory.character %></td>
+        <td><%= inventory.character.name %></td>
         <td><%= inventory.gold %></td>
         <td><%= inventory.silver %></td>
         <td><%= inventory.copper %></td>

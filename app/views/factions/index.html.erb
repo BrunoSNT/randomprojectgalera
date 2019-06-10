@@ -16,7 +16,7 @@
     <% @factions.each do |faction| %>
       <tr>
         <td><%= faction.name %></td>
-        <td><%= faction.alignment %></td>
+        <td><%= faction.alignment.name %></td>
         <td><%= faction.description %></td>
         <td><%= link_to 'Show', faction %></td>
         <td><%= link_to 'Edit', edit_faction_path(faction) %></td>

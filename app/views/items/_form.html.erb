@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :inventory_id %><br />
-    <%= form.collection_select(:inventory_id, Inventory.all, :id, :gold) %> 
+    <%= form.collection_select(:inventory_id, Inventory.all, :id, :character, :name) %> 
   </div>
 
   <div class="field">
