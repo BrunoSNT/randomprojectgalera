@@ -26,7 +26,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'themes'
   get 'dashboard/index'
   get 'dashboard/masterscreen'
   get 'welcome/index'
