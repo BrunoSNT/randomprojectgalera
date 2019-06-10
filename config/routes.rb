@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'themes'
-  get 'themes/new'
-  get 'dashboard/masterscreen'
-  get 'welcome/index'
   resources :abilities
   resources :dices
   resources :themes
@@ -21,7 +17,7 @@ Rails.application.routes.draw do
       resources :factions
       resources :professions
       resources :items
-      resource :characters
+      namespace :characters
       namespace :characters do
         resources :inventories
         resources :items
@@ -30,6 +26,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'themes'
   get 'dashboard/index'
   get 'dashboard/masterscreen'
   get 'welcome/index'
